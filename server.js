@@ -1,7 +1,7 @@
 import { app } from "./app.js";
-import { connectDB } from "./data/database.js";
+import { dbconnect } from "./data/database.js";
 
-connectDB();
+dbconnect
 
 app.listen(process.env.PORT, () => {
   console.log(

@@ -1,10 +1,8 @@
 import mongoose from "mongoose";
-
-export const connectDB = () => {
-  mongoose
-    .connect(process.env.MONGO_URI, {
-      dbName: "backendapi",
-    })
-    .then((c) => console.log(`Database Connected with ${c.connection.host}`))
-    .catch((e) => console.log(e));
-};
+export const dbconnect = mongoose.connect(process.env.MONGO_URL,{
+    dbName:"umesh"
+}).then(()=>{
+    console.log("db connected")
+}).catch((e)=>{
+    console.log(e);
+})
