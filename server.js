@@ -3,8 +3,6 @@ import { dbconnect } from "./data/database.js";
 
 dbconnect
 
-app.listen(process.env.PORT, () => {
-  console.log(
-    `Server is working on port:${process.env.PORT} in ${process.env.NODE_ENV} Mode`
-  );
-});
+app.listen(5000,()=>{
+    console.log("server built")
+})
